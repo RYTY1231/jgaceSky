@@ -1,13 +1,13 @@
-package com.jgacesky.wechat;
+package com.jgaceSky.database;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WechatApplication {
+public class DataBaseApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WechatApplication.class, args);
+        SpringApplication.run(DataBaseApplication.class, args);
     }
 
 }

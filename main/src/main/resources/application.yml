@@ -1,0 +1,42 @@
+#Server settings
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+#Logging
+logging:
+  level:
+    com.example: debug
+
+spring:
+#MybatisPlus configuration
+#    mybatis-plus:
+#        mapper-locations: classpath:mapper/*.xml
+#        type-aliases-package: com.example.entity
+#        configuration:
+#        map-underscore-to-camel-case: true
+#        cache-enabled: true
+#        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#
+  datasource:
+    url: jdbc:mysql://192.168.1.102:3306/jgaceSky?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    username: jgaceSky
+    password: quanjinshutiankong
+    driver-class-name: com.mysql.jdbc.Driver
+  profiles:
+    include: application-dev
+
+#servlet configuration
+servlet:
+  multipart:
+    max-file-size: 10MB
+    max-request-size: 10MB
+
+
+#Async
+  task:
+    executor:
+      core-pool-size: 5
+      max-pool-size: 10
+      queue-capacity: 25
